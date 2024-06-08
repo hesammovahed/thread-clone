@@ -15,10 +15,10 @@ const page = async () => {
         <>
             {user ?
                 <>
-                    <div className={"text-center mt-4"}>
-                        please complete you account
-                    </div>
                     <section className={"border p-3 m-2 bg-gray-900 mt-10 rounded"}>
+                        <div className={"text-center mt-4 font-bold my-3"}>
+                            please complete your account
+                        </div>
                         <AccountProfile userData={userInitialData} btnTitle={"continue"}/>
                     </section>
                 </>

@@ -8,6 +8,11 @@ const page = async () => {
     if (!user) return null
     const userInformation = await getUser({userId: user?.id})
     if (!userInformation?.onboarded) redirect("/onboarding")
-    return (<CreatePost userInformation={userInformation}/>)
+    const plainUserInformation = JSON.parse(JSON.stringify(userInformation));
+    return (
+        <>
+            <CreatePost userInformation={plainUserInformation}/>
+        </>
+    )
 }
 export default page
